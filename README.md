@@ -5,10 +5,35 @@ This is an experimental code generator for generating sum types in go that are J
 ## Installation
 
 ```bash
-go install https://github.com/hay-kot/gojsonsumgen
+go install github.com/hay-kot/gojsonsumgen
 ```
 
 ## Usage
 
-TODO
+```bash
+gojsonsumgen gen .
+```
 
+The `gen` command will walk through the directory and generate sum types for all the files that have the matching directive comment
+
+```go
+// gosumtype: <type name>
+```
+
+### Example Comment
+
+```go
+// ActionType is a sum type discriminator for AutomationDef
+//
+// gosumtype: ActionDef
+//
+//	opt:tag:  type
+//	opt:name: Type
+//
+//	'action-shell'  : ActionShell
+//	'action-python' : ActionPython
+//	'action-http'   : ActionHTTP
+type ActionType string
+```
+
+See [example](https://github.com/hay-kot/gojsonsumgen/tree/main/examples) for more examples of input and output files.
