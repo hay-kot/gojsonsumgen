@@ -23,7 +23,7 @@ The `gen` command will walk through the directory and generate sum types for all
 ### Example Comment
 
 ```go
-// ActionType is a sum type discriminator for AutomationDef
+// ActionType is a sum type discriminator for ActionDef
 //
 // gosumtype: ActionDef
 //

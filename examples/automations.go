@@ -1,7 +1,7 @@
 // Package test contains test files used for the gosumtype cli tool
 package examples
 
-// ActionType is a sum type discriminator for AutomationDef
+// ActionType is a sum type discriminator for ActionDef
 //
 // gosumtype: ActionDef
 //
